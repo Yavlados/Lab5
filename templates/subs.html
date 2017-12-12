@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+                {% block body1 %}
+                    <li><a href="{%url 'hello'  %}">Home</a></li>
+                    <li  class="active"><a href="#">Subscribers</a></li>
+                    <li><a href="#">qwe</a></li>
+                    <li ><a href="#">asd</a></li>
+                    <li><a href="#"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+<h2>Подписчики:</h2>
+    <br><br><br><br>
+      <div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  {% for order in orders %}
+      <tr>
+      <td><h2>{{  order.title   }}</h2></td>
+      <td><h2>{{ order.id }}</h2></td>
+      </tr>
+  {% endfor %}
+  </thead>
+  <tbody>
+{% for order in orders %}
+
+  {% endfor %}
+  </tbody>
+</table>
+    </div>
+{% endblock %}
+{% block body3 %}
+
+{% endblock %}
